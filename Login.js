@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Alert, Text,Button, TextInput, View, StyleSheet} from 'react-native';
-
+import { createStackNavigator } from 'react-navigation-stack';
+import { createAppContainer } from "react-navigation"; 
 export default class Login extends Component {
     constructor(props) {
       super(props);
@@ -39,12 +40,12 @@ export default class Login extends Component {
           <Button
             title={'Login'}
             style={styles.input}
-            onPress={this.onLogin.bind(this)}
+            // onPress={this.onLogin.bind(this)}
           />
           <Button
             title={'Create a new account'}
             style={styles.input}
-            onPress={() => this.props.navigation.navigate(Register)}
+            onPress={() => this.props.navigation.navigate('Register')}
           />
         </View>
       );

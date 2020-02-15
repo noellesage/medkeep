@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Alert, Button, TextInput, View, StyleSheet} from 'react-native';
+import { createStackNavigator } from 'react-navigation-stack';
+import { createAppContainer } from "react-navigation"; 
 
 export default class Register extends Component {
     constructor(props) {
@@ -9,6 +11,10 @@ export default class Register extends Component {
         username: '',
         password: '',
       };
+    }
+    Register()
+    {
+      // backend code
     }
     render() {
       return (
@@ -26,11 +32,17 @@ export default class Register extends Component {
             secureTextEntry={true}
             style={styles.input}
           />
-          
-          <Button
-            title={'Type in the Password Again'}
+          <TextInput
+            value={this.state.password}
+            onChangeText={(password) => this.setState({ password })}
+            placeholder={'Type Password Again'}
+            secureTextEntry={true}
             style={styles.input}
-            onPress={this.onLogin.bind(this)}
+          />
+          <Button
+            title={'Register!'}
+            style={styles.input}
+            onPress={() => this.props.navigation.navigate('Register')}
           />
         </View>
       );

@@ -74,7 +74,7 @@ function MyTabs() {
   );
 }
 
-export default function App() {
+export default function MainBoard() {
   return (
     <NavigationContainer>
       <MyTabs />

@@ -14,13 +14,10 @@ export default class App extends React.Component {
 }
 
 const AppNavigator = createStackNavigator({
-  Login: {
-    screen: Login
+  Login: Login,
+  Register:Register
   },
-  Register: {
-    screen: Register
-  }
-  },{
+{
     initialRouteName: "Login"
 });
 
