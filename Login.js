@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Alert, Button, TextInput, View, StyleSheet} from 'react-native';
+import { Alert, Text,Button, TextInput, View, StyleSheet} from 'react-native';
 
-export default class App extends Component {
+export default class Login extends Component {
     constructor(props) {
       super(props);
       
@@ -16,14 +16,12 @@ export default class App extends Component {
   
       Alert.alert('Credentials', `${username} + ${password}`);
     }
-  
-    onRegister(){
-      
-    }
+
   
     render() {
       return (
         <View style={styles.container}>
+          <Text style={{fontSize: 40, padding : 10}}>Welcome to MedKeep</Text>
           <TextInput
             value={this.state.username}
             onChangeText={(username) => this.setState({ username })}
@@ -46,7 +44,7 @@ export default class App extends Component {
           <Button
             title={'Create a new account'}
             style={styles.input}
-            onPress={this.onRegister()}
+            onPress={() => this.props.navigation.navigate(Register)}
           />
         </View>
       );

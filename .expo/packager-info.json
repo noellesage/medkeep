@@ -1,9 +1,9 @@
 {
-  "devToolsPort": 19003,
-  "expoServerPort": 19004,
-  "packagerPort": 19005,
-  "packagerPid": 6326,
-  "expoServerNgrokUrl": "https://ya-6uc.rachelwwwwb.medkeep.exp.direct",
-  "packagerNgrokUrl": "https://packager.ya-6uc.rachelwwwwb.medkeep.exp.direct",
-  "ngrokPid": 6338
+  "devToolsPort": 19002,
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null
 }
